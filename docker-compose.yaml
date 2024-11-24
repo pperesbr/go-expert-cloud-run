@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  go-expert-cloud-run:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7376:7376"
+    environment:
+      - WEATHER_API_KEY=fc439ef7d3ec41aca8a12608241611
+      - SERVER_PORT=7376
